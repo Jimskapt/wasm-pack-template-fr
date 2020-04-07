@@ -13,22 +13,25 @@ default = ["console_error_panic_hook"]
 [dependencies]
 wasm-bindgen = "0.2"
 
-# The `console_error_panic_hook` crate provides better debugging of panics by
-# logging them with `console.error`. This is great for development, but requires
-# all the `std::fmt` and `std::panicking` infrastructure, so isn't great for
-# code size when deploying.
+# La crate `console_error_panic_hook` permet d'améliorer le débogage des panic
+# en les affichant avec `console.error`. C'est très utile pour le
+# développement, mais il nécessite toute l'infrastructure de `std::fmt` et de
+# `std::panicking`, donc ce n'est pas très optimisé pour la taille du code
+# lorsque nous déployons.
 console_error_panic_hook = { version = "0.1.1", optional = true }
 
-# `wee_alloc` is a tiny allocator for wasm that is only ~1K in code size
-# compared to the default allocator's ~10K. It is slower than the default
-# allocator, however.
+# `wee_alloc` est un petit allocateur pour le wasm qui fait pèse ~1K dans le
+# code compilé, comparé aux ~10K de l'allocateur par défaut. Il est cependant
+# plus lent que l'allocateur par défaut.
 #
-# Unfortunately, `wee_alloc` requires nightly Rust when targeting wasm for now.
+# Malheureusement, `wee_alloc` nécessite Rust nightly lorsqu'il cible wasm,
+# pour l'instant.
 wee_alloc = { version = "0.4.2", optional = true }
 
 [dev-dependencies]
 wasm-bindgen-test = "0.2"
 
 [profile.release]
-# Tell `rustc` to optimize for small code size.
+# Règle `rustc` pour optimiser la compilation pour que le fichier soit le plus
+# compacte possible :
 opt-level = "s"

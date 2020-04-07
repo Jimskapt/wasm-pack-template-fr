@@ -1,69 +1,77 @@
 <div align="center">
 
-  <h1><code>wasm-pack-template</code></h1>
-
-  <strong>A template for kick starting a Rust and WebAssembly project using <a href="https://github.com/rustwasm/wasm-pack">wasm-pack</a>.</strong>
+  <h1><code>wasm-pack-template-fr</code></h1>
 
   <p>
-    <a href="https://travis-ci.org/rustwasm/wasm-pack-template"><img src="https://img.shields.io/travis/rustwasm/wasm-pack-template.svg?style=flat-square" alt="Build Status" /></a>
+    <strong>Un modèle pour génerer rapidement projet en Rust et WebAssembly en utilisant <a href="https://github.com/rustwasm/wasm-pack">wasm-pack</a>.</strong>
+  </p>
+
+  <p>
+    <i>(this the french translation of <a href="https://github.com/rustwasm/wasm-pack-template">https://github.com/rustwasm/wasm-pack-template</a>)</i>
+  </p>
+
+  <p>
+    <a href="https://travis-ci.org/Jimskapt/wasm-pack-template-fr">
+      <img src="https://img.shields.io/travis/Jimskapt/wasm-pack-template-fr.svg?style=flat-square" alt="Build Status" />
+    </a>
   </p>
 
   <h3>
-    <a href="https://rustwasm.github.io/docs/wasm-pack/tutorials/npm-browser-packages/index.html">Tutorial</a>
+    <a href="https://rustwasm.github.io/docs/wasm-pack/tutorials/npm-browser-packages/index.html">Tutoriel wasm-pack (EN)</a>
     <span> | </span>
-    <a href="https://discordapp.com/channels/442252698964721669/443151097398296587">Chat</a>
+    <a href="https://discordapp.com/channels/442252698964721669/443151097398296587">Tchat (EN)</a>
   </h3>
 
-  <sub>Built with 🦀🕸 by <a href="https://rustwasm.github.io/">The Rust and WebAssembly Working Group</a></sub>
+  <sub>Construit avec 🦀🕸 par <a href="https://rustwasm.github.io/">le groupe de travail de Rust et WebAssembly</a></sub>
 </div>
 
-## About
+## A propos
 
-[**📚 Read this template tutorial! 📚**][template-docs]
+[**📚 Lisez ce tutoriel sur le modèle (EN) ! 📚**][template-docs]
 
-This template is designed for compiling Rust libraries into WebAssembly and
-publishing the resulting package to NPM.
+Ce modèle est conçu pour compiler des bibliothèques Rust en WebAssembly et
+pour publier le paquet qui en résulte sur NPM.
 
-Be sure to check out [other `wasm-pack` tutorials online][tutorials] for other
-templates and usages of `wasm-pack`.
+Ne ratez pas [les autres tutoriels sur `wasm-pack` en ligne][tutorials] pour
+découvrir d'autres modèles et cas d'utilisation de `wasm-pack`.
 
 [tutorials]: https://rustwasm.github.io/docs/wasm-pack/tutorials/index.html
 [template-docs]: https://rustwasm.github.io/docs/wasm-pack/tutorials/npm-browser-packages/index.html
 
-## 🚴 Usage
+## 🚴 Utilisation
 
-### 🐑 Use `cargo generate` to Clone this Template
+### 🐑 Utilisez `cargo generate` pour cloner ce modèle
 
-[Learn more about `cargo generate` here.](https://github.com/ashleygwilliams/cargo-generate)
+[En apprendre plus sur `cargo generate` ici.](https://github.com/ashleygwilliams/cargo-generate)
 
 ```
-cargo generate --git https://github.com/rustwasm/wasm-pack-template.git --name my-project
-cd my-project
+cargo generate --git https://github.com/Jimskapt/wasm-pack-template-fr.git --name mon-projet
+cd mon-projet
 ```
 
-### 🛠️ Build with `wasm-pack build`
+### 🛠️ Compiler avec `wasm-pack build`
 
 ```
 wasm-pack build
 ```
 
-### 🔬 Test in Headless Browsers with `wasm-pack test`
+### 🔬 Tester dans un navigateur sans tête `wasm-pack test`
 
 ```
 wasm-pack test --headless --firefox
 ```
 
-### 🎁 Publish to NPM with `wasm-pack publish`
+### 🎁 Publier sur NPM avec `wasm-pack publish`
 
 ```
 wasm-pack publish
 ```
 
-## 🔋 Batteries Included
+## 🔋 Piles incluses
 
-* [`wasm-bindgen`](https://github.com/rustwasm/wasm-bindgen) for communicating
-  between WebAssembly and JavaScript.
+* [`wasm-bindgen`](https://github.com/rustwasm/wasm-bindgen) pour communiquer
+  entre WebAssembly et JavaScript.
 * [`console_error_panic_hook`](https://github.com/rustwasm/console_error_panic_hook)
-  for logging panic messages to the developer console.
-* [`wee_alloc`](https://github.com/rustwasm/wee_alloc), an allocator optimized
-  for small code size.
+  pour journaliser les erreurs de panic dans la console de développement.
+* [`wee_alloc`](https://github.com/rustwasm/wee_alloc), un allocateur optimisé
+  pour avoir un poids minime.
