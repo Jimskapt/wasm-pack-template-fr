@@ -3,7 +3,7 @@
   <h1><code>wasm-pack-template-fr</code></h1>
 
   <p>
-    <strong>Un modèle pour génerer rapidement projet en Rust et WebAssembly en utilisant <a href="https://github.com/rustwasm/wasm-pack">wasm-pack</a>.</strong>
+    <strong>Un modèle pour générer rapidement un projet en Rust et WebAssembly en utilisant <a href="https://github.com/rustwasm/wasm-pack">wasm-pack</a>.</strong>
   </p>
 
   <p>
@@ -55,7 +55,7 @@ cd mon-projet
 wasm-pack build
 ```
 
-### 🔬 Tester dans un navigateur sans tête `wasm-pack test`
+### 🔬 Tester dans un navigateur sans tête avec `wasm-pack test`
 
 ```
 wasm-pack test --headless --firefox
